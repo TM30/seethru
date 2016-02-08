@@ -1,0 +1,57 @@
+{  
+
+   "gateway_uptime" : "running, uptime 0d 9h 17m 42s",
+   "total":{  
+      "received":{  
+         "total":"453",
+         "queued":"387"
+      },
+      "sent":{  
+         "total":"36510",
+         "queued":"19"
+      },
+      "storesize":"22617",
+      "inbound":"0.05,0.07,0.03",
+      "outbound":"10.53,10.80,2.56"
+   },
+   "smppp_bind":{  
+      "ETISALAT":{  
+         "status":"online",
+         "failed":346382,
+         "queued":0,
+         "sms_sent":2753,
+         "sms_received":83,
+         "inbound":"0.00,0.00,0.00",
+         "outbound":"0.03,0.23,0.20",
+         "dlr_sent":0,
+         "dlr_received":349116
+      },
+      "ETISALAT_BC":{  
+         "status":"online",
+         "failed":17732,
+         "queued":22295,
+         "sms_sent":33757,
+         "sms_received":349,
+         "inbound":"0.06,0.05,0.01",
+         "outbound":"10.42,10.61,2.37",
+         "dlr_sent":0,
+         "dlr_received":18
+      },
+      "GLOBACOMM":{  
+         "status":"offline",
+         "failed":0,
+         "queued":0,
+         "sms_sent":0,
+         "sms_received":21,
+         "inbound":"0.00,0.00,0.00",
+         "outbound":"0.00,0.00,0.00",
+         "dlr_sent":0,
+         "dlr_received":0
+      }
+   },
+   "modules":{  
+      "sevas":"00H,41M,42S",
+      "sql_box":1,
+      "sms_box":1
+   }
+}

@@ -1,0 +1,55 @@
+<?php
+/**
+ * Site Index Controller
+ */
+class DashboardController extends Controller {
+    
+    function __construct() {
+        parent::__construct();
+        $this->setVariable('title', substr(get_class(),0,-10));
+    }
+    
+    function index(){
+        // $url = 'http://209.59.165.76:13013/status.xml';
+        $xml = simplexml_load_file(URL);
+        // print_r($xml);
+        $status = explode(' ', $xml->status); 
+        $this->setVariable('status', $status);
+
+        $sent = $xml->sms->sent->total;
+        $received = $xml->sms->received->total ;
+        $dlr = $xml->dlr->received->total ;
+        $queued = $xml->sms->sent->queued ;
+
+        $active = array();
+        $smscs = array();
+
+        foreach ($xml->smscs->smsc as $smsc) {
+            # code...
+            // echo (string)$smsc->id;
+            $search = array_search((string)$smsc->id, $active);
+            if (is_numeric($search)){
+                # code...
+                continue;
+            }
+            array_push($active, (string)$smsc->id);
+            array_push($smscs, $smsc);
+ 
+        }
+
+
+        $this->setVariable('sent', $sent);
+        $this->setVariable('received', $received);
+        $this->setVariable('queued', $queued);
+        $this->setVariable('dlr', $dlr);
+
+        $this->setVariable('smscs', $smscs);        
+
+        $this->setView('', 'dashboard2');
+
+        // $this->setVariable('platforms', $P);        
+    }
+   
+}
+
+?>

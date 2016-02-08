@@ -1,0 +1,14 @@
+[  
+   {  
+      "id":"1",
+      "name":"starfish",
+      "host_name":"starfish.atp-sevas.com",
+      "ip_address":"196.200.123.156"
+   },
+   {  
+      "id":"2",
+      "name":"freesia1",
+      "host_name":"freesia1.atp-sevas.com",
+      "ip_address":"72.52.231.28"
+   }
+]
